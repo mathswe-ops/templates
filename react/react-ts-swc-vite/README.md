@@ -8,4 +8,4 @@ Run development mode via `npm run dev`.
 
 Build for production via `npm run build`.
 
-Run ESLint via `npx eslint .`.
+Run ESLint via `npx eslint .` or `npm run lint`.
