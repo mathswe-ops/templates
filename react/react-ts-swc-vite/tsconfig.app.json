@@ -5,6 +5,7 @@
         "module": "ES2022",
         "skipLibCheck": true,
         "useDefineForClassFields": true,
+        "types": [ "vitest/globals", "@testing-library/jest-dom" ],
 
         /* Aliases */
         "baseUrl": ".",
