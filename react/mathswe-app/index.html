@@ -1,0 +1,51 @@
+<!-- Copyright (c) {{copyright-year}} Tobias Briones. All rights reserved. -->
+<!-- SPDX-License-Identifier: {{license-name}} -->
+<!-- This file is part of {{gh-repo-url}} -->
+
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="title"
+            content="{{meta-title}}"
+        />
+        <meta
+            name="description"
+            content="{{meta-description}}"
+        />
+        <meta
+            name="keywords"
+            content="{{meta-keywords}}"
+        />
+        <meta
+            name="author"
+            content="Tobias Briones"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+
+        <meta name="theme-color" content="{{meta-theme-color}}" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <title>{{app-title}}</title>
+
+        <link rel="icon" type="image/svg+xml" href="/{{app-icon-svg}}" />
+        <link
+            rel="apple-touch-icon" sizes="192x192"
+            href="/{{app-icon-192-png}}"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        />
+    </head>
+
+    <body>
+        <div id="root"></div>
+        <script src="/src/{{main-ts}}" type="module"></script>
+    </body>
+</html>
