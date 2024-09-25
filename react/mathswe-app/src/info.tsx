@@ -1,5 +1,5 @@
 // Copyright (c) {{copyright-year}} Tobias Briones. All rights reserved.
-// SPDX-License-Identifier: {{license-name}}
+// SPDX-License-Identifier: {{spdx-license-id}}
 // This file is part of {{gh-repo-url}}
 
 export const APP_SEMVER = "0.1.0-dev";

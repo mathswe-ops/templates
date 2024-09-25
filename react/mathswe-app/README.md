@@ -63,6 +63,7 @@ Replace the variables in the template files:
 - **app-name**
 - **mvp-version-label** (can be either `` or `MVP ` with a trailing space, 
   so it becomes `MVP v0.1.0-dev`)
+- **spdx-license-id**
 
 ### Installation
 
