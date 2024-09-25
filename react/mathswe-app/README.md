@@ -94,6 +94,7 @@ Update `main.ts` so it looks like:
 ```ts
 import App from "@app/App.tsx";
 import "@app/assets/msw-engineer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import MathJaxContext from "better-react-mathjax/MathJaxContext";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -121,12 +122,6 @@ function render(rootEl: HTMLElement) {
             </StrictMode>,
         );
 }
-```
-
-Import Boostrap in `App.tsx`:
-
-```ts
-import "bootstrap/dist/css/bootstrap.min.css";
 ```
 
 ### Final Step
