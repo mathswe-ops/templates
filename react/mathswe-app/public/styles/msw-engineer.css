@@ -172,8 +172,8 @@ figure > figcaption {
 
 /* Twitter Button */
 .btn-twitter {
-    background-color: #1DA1F2;
-    border-radius: 16px;
+    background-color: #1DA1F2 !important;
+    border-radius: 16px !important;
 }
 
 .btn-twitter:hover,
@@ -183,8 +183,8 @@ figure > figcaption {
 
 /* GitHub Button */
 .btn-github {
-    background-color: #333;
-    border-radius: 16px;
+    background-color: #333 !important;
+    border-radius: 16px !important;
 }
 
 .btn-github:hover,
@@ -194,8 +194,8 @@ figure > figcaption {
 
 /* LinkedIn Button */
 .btn-linkedin {
-    background-color: #0077B5;
-    border-radius: 16px;
+    background-color: #0077B5 !important;
+    border-radius: 16px !important;
 }
 
 .btn-linkedin:hover,
