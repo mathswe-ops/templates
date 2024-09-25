@@ -82,6 +82,13 @@ Execute:
 
 ### Update
 
+Update the `app` path if your application is a monolith: `tsconfig.app.json`,
+and `vite.config.ts`.
+
+- From `"@app/*": [ "src/*" ]` to `"@app/*": [ "src/app/*" ]`.
+- From `"@app": resolve(__dirname, "src"),` to `"@app": resolve(__dirname, 
+"src/app"),`.
+
 Update `main.ts` so it looks like:
 
 ```ts
