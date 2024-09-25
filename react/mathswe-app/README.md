@@ -89,8 +89,10 @@ and `vite.config.ts`.
 - From `"@app": resolve(__dirname, "src"),` to `"@app": resolve(__dirname, 
 "src/app"),`.
 
-⚠️ If your IDE doesn't recognize path aliases, you can move them from `tsconfig.
-app.json` to `tsconfig.node.json` and it should fix it.
+⚠️ If your IDE doesn't recognize path aliases, you can copy them from `tsconfig.
+app.json` to `tsconfig.node.json` and it should fix it. If you remove them from
+`tsconfig.app.json` the build will fail, so you will have to maintain both
+versions until a better fix shows up.
 
 Update `main.ts` so it looks like:
 
