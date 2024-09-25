@@ -131,7 +131,10 @@ Update the `package.json` when needed, like `name` and `"version": "0.1.0-dev"`.
 
 ### Final Step
 
-Delete dummy Vite files, like icons from `/public` and `/src/assets`.
+Delete dummy Vite files, like icons from `/public` and `/src/assets`. Delete 
+vite code, like `index.css`, `App.css`.
+
+Update `App.test.tsx` with your initial application specs.
 
 Delete the `Template Setup` section of this `README.md` after you set up your
 project.
