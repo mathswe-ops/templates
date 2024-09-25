@@ -23,12 +23,12 @@
 
         /* JSX runtime */
         "jsx": "react-jsx",
-        "jsxImportSource": "react"
+        "jsxImportSource": "react",
     },
     "include": [
         "vite.config.ts",
         "vitest.config.ts",
         "src/**/*.ts",
-        "src/**/*.tsx"
+        "src/**/*.tsx",
     ]
 }
