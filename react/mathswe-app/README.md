@@ -1,5 +1,5 @@
 <!-- Copyright (c) {{copyright-year}} Tobias Briones. All rights reserved. -->
-<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- SPDX-License-Identifier: {{spdx-license-id}} -->
 <!-- This file is part of {{gh-repo-url}} -->
 
 # {{project-name}}
