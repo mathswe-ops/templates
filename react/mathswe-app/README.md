@@ -127,6 +127,8 @@ function render(rootEl: HTMLElement) {
 }
 ```
 
+Update the `package.json` when needed, like `name` and `"version": "0.1.0-dev"`.
+
 ### Final Step
 
 Delete dummy Vite files, like icons from `/public` and `/src/assets`.
