@@ -29,6 +29,10 @@ export default tseslint.config(
             "react-refresh": reactRefresh,
         },
         rules: {
+            "@typescript-eslint/consistent-type-definitions": [
+                "error",
+                "type",
+            ],
             ...reactHooks.configs.recommended.rules,
             "react-refresh/only-export-components": [
                 "warn",
