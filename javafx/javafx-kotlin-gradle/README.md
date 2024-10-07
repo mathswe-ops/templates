@@ -6,7 +6,7 @@ This template provides a project from scratch with support for:
 - Kotlin
 - Gradle + KTS
 - ArrowKt
-- JUnit
+- Kotlin Test with JUnit
 - JPackage (Linux + Windows)
 
 ## Details
