@@ -8,8 +8,8 @@ group = "com.mathswe"
 version = "1.0-SNAPSHOT"
 
 application {
-    mainModule.set("com.mathswe.app")
-    mainClass.set("com.mathswe.app.MainKt")
+    mainModule = "com.mathswe.app"
+    mainClass = "com.mathswe.app.MainKt"
 }
 
 kotlin {
