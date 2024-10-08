@@ -34,7 +34,12 @@ Run:
 - `./gradlew run`
 - `./gradlew jlink`
 - `./gradlew installDist`
-- `./gradlew jpackage`
+- `jpackage`:
+    - `./gradlew jpackage` (for non-Debian)
+    - `./gradlew jpackage -PinstallerType=deb` (for Debian)
+
+Notice `jpackage` receives a `installerType` argument to make it work on Ubuntu,
+since the `RPM` installer doesn't seem to work on Ubuntu.
 
 To ensure the project is not broken, and *your system side effects**, like JDK
 installed, OS tools (RPM, etc.), do not break the project.
@@ -47,6 +52,19 @@ updated.
 The project uses Java modules, but Gradle doesn't support this very well. That's
 why it uses the `org.javamodularity.moduleplugin` to read Java modules when
 building.
+
+### Need to Test
+
+#### JPackage Test Debt
+
+I need to test the `jpackage` configuration in Windows. I copied it (and
+refactored it) from a project (`tsdfx`) which installer worked on Windows, but
+still have to test it in this template project.
+
+In general, `jpackage` should be tested in multiple platforms, like Mac and
+non-Debian distributions. There's the limitation I mentioned above when running
+it on Ubuntu, since it can only generate the `deb` but not the `rpm`
+installer (on my machine, at least).
 
 ## Troubleshooting
 

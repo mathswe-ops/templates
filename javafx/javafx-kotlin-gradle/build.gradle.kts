@@ -3,6 +3,7 @@ plugins {
     application
     id("org.javamodularity.moduleplugin") version "1.8.15"
     id("org.openjfx.javafxplugin") version "0.1.0"
+    id("org.beryx.jlink") version "3.0.1"
 }
 
 group = "com.mathswe"
@@ -32,4 +33,52 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+jlink {
+    imageZip = project
+        .file(
+            "${layout.buildDirectory}/distributions/app-${javafx.platform.classifier}.zip"
+        )
+    options.addAll(
+        listOf(
+            "--strip-debug",
+            "--no-header-files",
+            "--no-man-pages",
+        )
+    )
+
+    launcher {
+        name = "tsd-fx"
+    }
+
+    jpackage {
+        // It requires the package `rpm` in Linux and Wix 3 on Windows
+        // https://docs.oracle.com/en/java/javase/14/jpackage/packaging-overview.html
+
+        val currentOs = org.gradle.internal.os.OperatingSystem.current()
+
+        if (currentOs.isLinux) {
+            val installerTypeProperty = project
+                .findProperty("installerType") as String?
+
+            if (installerTypeProperty != null) {
+                installerType = installerTypeProperty
+            }
+        }
+        else if (currentOs.isWindows) {
+            imageOptions.addAll(listOf("--win-console"))
+
+            installerOptions.addAll(
+                listOf(
+                    "--resource-dir",
+                    "jpackage/windows",
+                    "--verbose",
+                    "--win-per-user-install",
+                    "--win-dir-chooser",
+                    "--win-menu",
+                )
+            )
+        }
+    }
 }
