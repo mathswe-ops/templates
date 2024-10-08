@@ -11,7 +11,7 @@ version = "1.0-SNAPSHOT"
 
 application {
     mainModule = "com.mathswe.app"
-    mainClass = "com.mathswe.app.MainKt"
+    mainClass = "com.mathswe.app.Main"
 }
 
 kotlin {

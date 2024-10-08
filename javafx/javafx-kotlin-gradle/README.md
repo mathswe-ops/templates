@@ -47,6 +47,16 @@ the argument.
 To ensure the project is not broken, and *your system side effects**, like JDK
 installed, OS tools (RPM, etc.), do not break the project.
 
+## Application Plugin
+
+Ensure to use the normal `mainClass` instead of the `Kt` suffixed for JavaFX
+applications. For example, use `com.mathswe.app.Main` instead of
+`com.mathswe.app.MainKt`.
+
+The `Kt` version seems necessary for normal applications, but it is not for
+JavaFX apps, and if you leave the `Kt` suffix, the `./gradle run --args=""`
+won't pass the arguments to the JavaFX app.
+
 ## ArrowKt
 
 The ArrowKt library should be used across any MathSwe Kotlin project to enhance
