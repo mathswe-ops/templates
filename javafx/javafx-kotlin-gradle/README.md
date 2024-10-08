@@ -44,6 +44,32 @@ since the `RPM` installer doesn't seem to work on Ubuntu.
 To ensure the project is not broken, and *your system side effects**, like JDK
 installed, OS tools (RPM, etc.), do not break the project.
 
+## ArrowKt
+
+The ArrowKt library should be used across any MathSwe Kotlin project to enhance
+FP.
+
+It presents a major issue since it doesn't fully support JPMS. One workaround
+that might work is to add it with excluded offending modules:
+
+```kotlin
+val arrowVersion = "1.2.4"
+
+implementation("io.arrow-kt:arrow-core:$arrowVersion") {
+    // If you include all ArrowKt modules, the JPMS will fail when building:
+    //
+    // Error occurred during initialization of boot layer
+    // java.lang.module.ResolutionException: Modules arrow.autocloseable
+    // and arrow.annotations export package arrow to module arrow.continuations
+    exclude(group = "io.arrow-kt", module = "arrow-autocloseable")
+    exclude(group = "io.arrow-kt", module = "arrow-annotations")
+}
+implementation("io.arrow-kt:arrow-fx-coroutines:$arrowVersion")
+```
+
+Another way is to add it normally without exclusions and disable the Java
+modules, which will impact `jlink`.
+
 ## Details
 
 It uses the latest (LTS) versions at the date this template was created or
