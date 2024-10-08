@@ -23,6 +23,22 @@ This template provides a project from scratch with support for:
     - [build.gradle.kts](build.gradle.kts).
 - Replace this `README.md`.
 
+## Ensuring new Changes Work
+
+It is important to check essential commands don't break when changing anything
+on the project or changing the OS or its state (libraries installed, etc.).
+
+Run:
+
+- `./gradlew clean build`
+- `./gradlew run`
+- `./gradlew jlink`
+- `./gradlew installDist`
+- `./gradlew jpackage`
+
+To ensure the project is not broken, and *your system side effects**, like JDK
+installed, OS tools (RPM, etc.), do not break the project.
+
 ## Details
 
 It uses the latest (LTS) versions at the date this template was created or
