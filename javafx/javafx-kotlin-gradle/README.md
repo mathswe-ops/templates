@@ -23,6 +23,11 @@ This template provides a project from scratch with support for:
     - [build.gradle.kts](build.gradle.kts).
 - Replace this `README.md`.
 
+## MathSweKt
+
+This template has an in-house library [mathswekt](src/main/kotlin/mathswekt) to
+use across any MathSwe Kotlin application.
+
 ## Ensuring new Changes Work
 
 It is important to check essential commands don't break when changing anything
