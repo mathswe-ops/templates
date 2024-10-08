@@ -111,6 +111,10 @@ non-Debian distributions. There's the limitation I mentioned above when running
 it on Ubuntu, since it can only generate the `deb` but not the `rpm`
 installer (on my machine, at least).
 
+All the detailed configurations in different platforms must be overridden with
+proper values (icon, launcher, etc.).
+[Override JPackage Resources](https://docs.oracle.com/en/java/javase/15/jpackage/override-jpackage-resources.html)
+
 ## Troubleshooting
 
 ### Fail to Load Resources
