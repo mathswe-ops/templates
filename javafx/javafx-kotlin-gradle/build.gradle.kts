@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.20"
     application
     id("org.javamodularity.moduleplugin") version "1.8.15"
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 group = "com.mathswe"
@@ -14,6 +15,11 @@ application {
 
 kotlin {
     jvmToolchain(21)
+}
+
+javafx {
+    version = "21"
+    modules = listOf("javafx.controls")
 }
 
 repositories {

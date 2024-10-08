@@ -11,13 +11,16 @@ This template provides a project from scratch with support for:
 
 ## Setup Template
 
-- Rename the app and package name in 
-  - [settings.gradle.kts](settings.gradle.kts).
-  - [module-info.java](src/main/java/module-info.java).
-  - [package](src/main/kotlin).
-  - [test package](src/test/kotlin).
-  - [build.gradle.kts](build.gradle.kts).
-
+- Add more JavaFX modules, if needed. Update [javafx.modules](build.gradle.kts)
+  and [module-info.java](src/main/java/module-info.java).
+- Replace the template code
+  in [Main.kt](src/main/kotlin/com/mathswe/app/Main.kt).
+- Rename the app and package name in
+    - [settings.gradle.kts](settings.gradle.kts).
+    - [module-info.java](src/main/java/module-info.java).
+    - [package](src/main/kotlin).
+    - [test package](src/test/kotlin).
+    - [build.gradle.kts](build.gradle.kts).
 - Replace this `README.md`.
 
 ## Details
