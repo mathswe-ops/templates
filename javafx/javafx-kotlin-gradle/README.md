@@ -36,10 +36,13 @@ Run:
 - `./gradlew installDist`
 - `jpackage`:
     - `./gradlew jpackage` (for non-Debian)
-    - `./gradlew jpackage -PinstallerType=deb` (for Debian)
+    - `./gradlew jpackage -PinstallerType=deb` (for Debian if the above didn't
+      work)
 
 Notice `jpackage` receives a `installerType` argument to make it work on Ubuntu,
-since the `RPM` installer doesn't seem to work on Ubuntu.
+since the `RPM` installer doesn't seem to work on some projects and Ubuntu. Try
+`./gradlew jpackage` in your project, first. If it doesn't work in Ubuntu, pass
+the argument.
 
 To ensure the project is not broken, and *your system side effects**, like JDK
 installed, OS tools (RPM, etc.), do not break the project.
