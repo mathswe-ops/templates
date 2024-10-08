@@ -31,6 +31,7 @@ on the project or changing the OS or its state (libraries installed, etc.).
 Run:
 
 - `./gradlew clean build`
+- `./gradlew wrapper`
 - `./gradlew run`
 - `./gradlew jlink`
 - `./gradlew installDist`
