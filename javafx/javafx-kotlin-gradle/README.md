@@ -119,6 +119,16 @@ proper values (icon, launcher, etc.).
 
 ## Troubleshooting
 
+### Printing Module Info
+
+These values can provide insights to debug the module and class path.
+
+```kotlin
+println(System.getProperty("jdk.module.path"))
+println("Classpath: ${System.getProperty("java.class.path")}")
+println("Module: ${Main::class.java.module}")
+```
+
 ### Fail to Load Resources
 
 **Problem:** You can only load resources when their directory name has a hyphen,
