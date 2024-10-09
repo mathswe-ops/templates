@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e
+
+app_name="JavaFX + Kotlin + Gradle Template"
+app_id="javafx-kotlin-gradle-template"
+
+app_path="/opt/$app_id/bin"
+user_home=$(eval echo ~$SUDO_USER)
+bashrc_file="$user_home/.bashrc"
+
+# Ensure .bashrc exists
+if [ ! -f "$bashrc_file" ]; then
+    echo "$bashrc_file not found, creating it."
+    touch "$bashrc_file"
+fi
+
+# Add the app to then system PATH #
+
+# Check if the app path is already in .bashrc to avoid duplicates
+if ! grep -q "$app_path" "$bashrc_file"; then
+    echo "# $app_name" >> "$bashrc_file"
+    echo "export PATH=\"\$PATH:$app_path\"" >> "$bashrc_file"
+    echo "" >> "$bashrc_file"
+
+    echo "Added $app_path to PATH in $bashrc_file."
+else
+    echo "$app_path is already in $bashrc_file"
+fi
+
+echo "Open a new terminal to access $app_id."

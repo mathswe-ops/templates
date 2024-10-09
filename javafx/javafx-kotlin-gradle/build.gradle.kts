@@ -49,7 +49,7 @@ jlink {
     )
 
     launcher {
-        name = "tsd-fx"
+        name = "javafx-kotlin-gradle-template"
     }
 
     jpackage {
@@ -62,9 +62,21 @@ jlink {
             val installerTypeProperty = project
                 .findProperty("installerType") as String?
 
+            // Set the installer type (DEB) explicitly from the
+            // jpackage argument to avoid building RMP (building RMP on
+            // Ubuntu might fail sometimes)
             if (installerTypeProperty != null) {
                 installerType = installerTypeProperty
             }
+
+            // For Debian. Overrides resources (untested on RedHat)
+            installerOptions.addAll(
+                listOf(
+                    "--resource-dir",
+                    "jpackage/linux",
+                    "--verbose",
+                )
+            )
         }
         else if (currentOs.isWindows) {
             imageOptions.addAll(listOf("--win-console"))

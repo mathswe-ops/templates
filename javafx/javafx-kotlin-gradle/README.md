@@ -21,6 +21,8 @@ This template provides a project from scratch with support for:
     - [package](src/main/kotlin).
     - [test package](src/test/kotlin).
     - [build.gradle.kts](build.gradle.kts).
+- Replace `app_name` and `app_id`
+  in [jpackage/linux/postinst](jpackage/linux/postinst).
 - Replace this `README.md`.
 
 ## MathSweKt
