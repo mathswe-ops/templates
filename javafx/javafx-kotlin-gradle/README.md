@@ -129,6 +129,34 @@ println("Classpath: ${System.getProperty("java.class.path")}")
 println("Module: ${Main::class.java.module}")
 ```
 
+### Do not Use Kotlin Testing
+
+Other libraries like `kotlin.test` currently don't work with the JPMS
+(Java modules):
+
+```
+class com.mathswe.app.anim.FadeAnimLoopTest (in module com.mathswe.app) cannot access class kotlin.test.AssertionsKt (in module kotlin.test) because module com.mathswe.app does not read module kotlin.test
+java.lang.IllegalAccessError: class com.mathswe.app.anim.FadeAnimLoopTest (in module com.mathswe.app) cannot access class kotlin.test.AssertionsKt (in module kotlin.test) because module com.mathswe.app does not read module kotlin.test
+	at com.mathswe.app@1.0-SNAPSHOT/com.mathswe.app.anim.FadeAnimLoopTest.test invalid cycle duration(FadeAnimLoopTest.kt:78)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+```
+
+I've mostly tried everything, and there's no proper solution with modules,
+every "solution" is absolutely overengineered garbage and contradictory with
+current settings.
+
+The only sane way to fix this is deleting modules (`module-info.java`) from the
+project, which is lame because you lose the installer (jpackage).
+
+The current solution is **not to use kotlin.test** or any other library that
+causes module issues. You can still use parts that do not conflict, like the
+`kotlin.test.Test` annotation. Stop using "the Kotlin way" if it conflicts.
+
+For example, Kotlin `assertFailsWith` conflicts with modules, so use
+JUnit `assertThrows` instead.
+
 ### Fail to Load Resources
 
 **Problem:** You can only load resources when their directory name has a hyphen,
