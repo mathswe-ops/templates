@@ -27,12 +27,18 @@ repositories {
     mavenCentral()
 }
 
+val mockitoAgent = configurations.create("mockitoAgent")
+
 dependencies {
     testImplementation(kotlin("test"))
+    testImplementation("org.mockito:mockito-core:5.+")
+    mockitoAgent("org.mockito:mockito-core:5.+") { isTransitive = false }
 }
 
 tasks.test {
     useJUnitPlatform()
+
+    jvmArgs("-javaagent:${mockitoAgent.asPath}")
 }
 
 jlink {

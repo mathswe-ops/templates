@@ -23,6 +23,9 @@ This template provides a project from scratch with support for:
     - [build.gradle.kts](build.gradle.kts).
 - Replace `app_name` and `app_id`
   in [jpackage/linux/postinst](jpackage/linux/postinst).
+- Delete other dummy code, like the
+  [mock package](src/main/kotlin/com/mathswe/app/mock), and
+  [test mock package](src/test/kotlin/com/mathswe/app/mock).
 - Replace this `README.md`.
 
 ## MathSweKt
@@ -43,7 +46,7 @@ Run:
 - `./gradlew jlink`
 - `./gradlew installDist`
 - `jpackage`:
-    - `./gradlew jpackage` (for non-Debian)
+    - `./gradlew jpackage`
     - `./gradlew jpackage -PinstallerType=deb` (for Debian if the above didn't
       work)
 
@@ -154,8 +157,8 @@ The current solution is **not to use kotlin.test** or any other library that
 causes module issues. You can still use parts that do not conflict, like the
 `kotlin.test.Test` annotation. Stop using "the Kotlin way" if it conflicts.
 
-For example, Kotlin `assertFailsWith` conflicts with modules, so use
-JUnit `assertThrows` instead.
+For example, Kotlin `assertFailsWith` conflicts with modules, so use JUnit
+`assertThrows` instead.
 
 ### Fail to Load Resources
 
