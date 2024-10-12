@@ -130,6 +130,12 @@ function render(rootEl: HTMLElement) {
 
 Update the `package.json` when needed, like `name` and `"version": "0.1.0-dev"`.
 
+### Common Code
+
+Shared code that still doesn't belong to a library is in
+the [commons](../common) directory. Merge those sources in your MathSwe React
+app to keep synced.
+
 ### Final Step
 
 Delete dummy Vite files, like icons from `/public` and `/src/assets`. Delete 
