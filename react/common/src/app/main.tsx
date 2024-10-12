@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // This file is part of https://github.com/texsydo/texsydo---mvp
 
-import "./index.css"
+import "react/common/src/app/index.css"
 import App from "@app/App.tsx";
 import MathJaxContext from "better-react-mathjax/MathJaxContext";
 import { StrictMode } from "react";
