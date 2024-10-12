@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // This file is part of https://github.com/texsydo/texsydo---mvp
 
-import "react/common/src/components/Article/Main/Main.css"
+import "./Main.css"
 import { PropsWithChildren } from "react";
 
 const Main = ({ children }: PropsWithChildren) => <>

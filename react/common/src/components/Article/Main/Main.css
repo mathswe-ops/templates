@@ -7,25 +7,21 @@ main > article > section {
     flex-direction: column;
 }
 
-main section .wrap > a > h2,
-main section .wrap > a > h3,
-main section .wrap > a > h4,
-main section .wrap > .wrap-width > a > h2,
-main section .wrap > .wrap-width > a > h3,
-main section .wrap > .wrap-width > a > h4 {
+main section a > h2,
+main section a > h3,
+main section a > h4 {
     padding: 0.125rem;
     margin-bottom: 0;
     text-align: center;
 }
 
 
-main section .wrap > a > img.nav-icon,
-main section .wrap > .wrap-width > a > img.nav-icon {
+main section a > img.nav-icon,
+main section .wrap > a > img.nav-icon {
     margin-bottom: 1rem;
 }
 
-main section .wrap > p,
-main section .wrap > .wrap-width > p {
+main section p {
     padding: 1rem 0;
     text-align: center;
 }

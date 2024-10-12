@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // This file is part of https://github.com/texsydo/texsydo---mvp
 
-import "react/common/src/components/TerminalOutput/TerminalOutput.css";
+import "./TerminalOutput.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Fragment } from "react";
 import {
@@ -11,7 +11,7 @@ import {
     itemToIcon,
     itemToString,
     TerminalItem,
-} from "react/common/src/components/TerminalOutput/TerminalItem.ts";
+} from "./TerminalItem.ts";
 
 type TerminalOutputProps = {
     outputs: TerminalItem[];
