@@ -1,8 +1,8 @@
 // Copyright (c) 2024 Tobias Briones. All rights reserved.
-// SPDX-License-Identifier: AGPL-3.0-or-later
-// This file is part of https://github.com/texsydo/texsydo---mvp
+// SPDX-License-Identifier: BSD-3-Clause
+// This file is part of https://github.com/mathswe-ops/templates
 
-import "react/common/src/components/VideoAnim/AutoVideo.css"
+import "./AutoVideo.css"
 
 type AutoVideoProps = {
     src: string,
